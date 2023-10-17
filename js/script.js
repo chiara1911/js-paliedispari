@@ -15,33 +15,39 @@
 
 // console.log(listWords)
 // elementi array
-let words ='';
- let listWords =[];
+
+ let listChar =[];
+ let CharReverse =[];
 // bottone che invia dati
 const btn = document.querySelector('button');
 
 
 btn.addEventListener('click', function (){
-  const wordsEl = document.getElementById('words').value;
-  
+  const words = document.getElementById('words').value;
+ listChar = words.split('');
+ let y = listChar.toString();
+ console.log(listChar);
+ CharReverse = listChar.reverse();
+ 
+  console.log(CharReverse);
+  let x = CharReverse.toString();
+  console.log(y);
+  console.log(x);
 
- let flag = false;
- for (let i = 0; i < listWords.length; i++) {
+  wordsReverse(x,y);
 
-    if (listWords[i] !== listWords[i].reverse()) {
-   flag = false;
- } else {
-          flag = true;
-      }
-       
-    }
- console.log(flag);
-   
-
+ 
 });
 
 
 
+function wordsReverse(right, left) {
+  if (right === left) {
+    console.log('è un palindromo');
+  } else {
+    console.log('non è un palindromo');
+  }
+}
 
 
 
