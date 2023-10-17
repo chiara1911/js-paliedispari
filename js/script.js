@@ -5,23 +5,34 @@
 
 
 // questo è array
-let listWords = [];
+let listWords = [
+    'o',
+    't',
+    't',
+    'o'
+];
+console.log(listWords);
 // console.log(listWords)
 // elementi array
-let words ='';
-const wordsEl = document.getElementById('words');
+// let words ='';
+// const wordsEl = document.getElementById('words');
 // bottone che invia dati
 const btn = document.querySelector('button');
 
-// mettere parole nell'array listwords
-btn.addEventListener('click', function(){
-    const listWords = words.split("");
-    console.log(listWords);
-    for (let i = 0; i < listWords.length; i++){      
-        
+let flag = false;
+btn.addEventListener('click', function () {
+    for (let i = 0; i < listWords.length; i++) {
+
+      if (listWords !== listWords.reverse()) {
+    flag = false;
+    } else {
+          flag = true;
+      }
        
     }
-    
+    console.log(flag);
+   
+
 });
 
 
