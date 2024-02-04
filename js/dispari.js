@@ -34,7 +34,7 @@ enter.addEventListener('click', function () {
     clientNr.innerHTML = 'il tuo numero ' + number;
     serverNr.innerHTML = 'il numero del computer ' + random;
     result.innerHTML = 'la somma ' + calc;
-    
+
 });
 
 
@@ -50,12 +50,14 @@ function evenNumber(num1) {
 
     if (num1 % 2 === 0) {
         flagSum = true;
-        console.log('è pari')
+        // console.log('è pari')
+        textSum = 'è pari'
     } else {
         flagSum = false;
-        console.log('è dispari');
+        // console.log('è dispari');
+        textSum = 'è dispari';
     }
-
+    return textSum
 };
 
 function match(x, y) {
@@ -66,7 +68,7 @@ function match(x, y) {
         console.log('hai perso');
         text = 'hai perso';
     }
-    gameRes.innerHTML = 'quindi ' + text;
+    gameRes.innerHTML = 'quindi ' + text + ' perchè la somma è ' + textSum;
 }
 
 
