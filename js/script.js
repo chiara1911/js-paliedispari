@@ -44,9 +44,13 @@ btn.addEventListener('click', function (){
 function wordsReverse(right, left) {
   if (right === left) {
     console.log('è un palindromo');
+    text = 'non è un palindromo';
   } else {
     console.log('non è un palindromo');
+    text = 'non è un palindromo';
   }
+  result.innerHTML = text;
+  
 }
 
 

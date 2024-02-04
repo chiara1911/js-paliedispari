@@ -13,19 +13,54 @@
 const enter = document.getElementById('send');
 const even = document.getElementById('even');
 const odd = document.getElementById('odd');
-let flag ;
-even.addEventListener ('click', function(){
-flag=true;
+let flag;
+let flagSum;
+even.addEventListener('click', function () {
+    flag = true;
 });
 
-odd.addEventListener ('click', function(){
+odd.addEventListener('click', function () {
 
-flag=false;
+    flag = false;
 });
-enter.addEventListener ('click', function(){
 
+enter.addEventListener('click', function () {
     let number = document.getElementById('number').value;
- let random = getRndInteger(1,5);
-
+    let random = getRndInteger(1, 5);
+    let calc = sum(number, random);
+    evenNumber(calc);
+    match(flag, flagSum);
+    console.log(number, random, calc);
 
 });
+
+
+function sum(user, cpu) {
+    let c = +user + +cpu;
+    return c;
+}
+
+
+// Stabiliamo se la somma dei due numeri è pari o dispari 
+
+function evenNumber(num1) {
+
+    if (num1 % 2 === 0) {
+        flagSum = true;
+        console.log('è pari')
+    } else {
+        flagSum = false;
+        console.log('è dispari');
+    }
+
+};
+
+function match(x, y) {
+    if (x === y) {
+        console.log('hai vinto');
+    } else {
+        console.log('hai perso');
+    }
+}
+
+
