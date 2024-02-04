@@ -30,8 +30,11 @@ enter.addEventListener('click', function () {
     let calc = sum(number, random);
     evenNumber(calc);
     match(flag, flagSum);
-    console.log(number, random, calc);
-
+    // console.log(number, random, calc);
+    clientNr.innerHTML = 'il tuo numero ' + number;
+    serverNr.innerHTML = 'il numero del computer ' + random;
+    result.innerHTML = 'la somma ' + calc;
+    
 });
 
 
@@ -57,10 +60,13 @@ function evenNumber(num1) {
 
 function match(x, y) {
     if (x === y) {
+        text = 'hai vinto';
         console.log('hai vinto');
     } else {
         console.log('hai perso');
+        text = 'hai perso';
     }
+    gameRes.innerHTML = 'quindi ' + text;
 }
 
 

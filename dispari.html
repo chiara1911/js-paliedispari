@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pali e Dispari</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1></h1>
     <button class="btn" id="even">pari</button>
     <button class="btn" id="odd">dispari</button>
 
-    <input type="number" name="usernr" value="" id="number" placeholder="metti un numero da 1 a 5">
-    
-    
-   
-    <button class="btn" id="send">invia</button>
-    <div>
+    <input
+      type="number"
+      name="usernr"
+      value=""
+      id="number"
+      placeholder="metti un numero da 1 a 5"
+    />
 
+    <button class="btn" id="send">invia</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <p id="clientNr"></p>
+        </div>
+        <div class="col-4">
+          <p id="serverNr"></p>
+        </div>
+        <div class="col-4">
+          <p id="result"></p>
+        </div>
+      </div>
     </div>
+    <span id="gameRes"></span>
     <script src="js/utility.js"></script>
     <script src="js/dispari.js"></script>
-</body>
+  </body>
 </html>
